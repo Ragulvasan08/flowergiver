@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
 html {
   height: 200vh;
@@ -42,7 +43,6 @@ h1 {
   left: 50%;
   transform: translate(-50%, 0%);
 }
-
 .sunflwr__leaf--left, .sunflwr__leaf--right {
   width: 0%;
   height: 20%;
@@ -59,7 +59,6 @@ h1 {
   left: 55%;
   transform: translate(0%, -50%) rotate(-70deg);
 }
-
 @keyframes sunflwr__leaf {
   0% {
     width: 0%;
@@ -70,7 +69,6 @@ h1 {
     border: 2px solid black;
   }
 }
-
 .sunflwr__stem {
   position: absolute;
   transform: translate(-50%, 0%);
@@ -82,7 +80,6 @@ h1 {
   border: 2px solid black;
   animation: sunflwr__stem forwards 1s;
 }
-
 @keyframes sunflwr__stem {
   0% {
     height: 0;
@@ -91,7 +88,6 @@ h1 {
     height: 60%;
   }
 }
-
 .sunflwr__center {
   border-radius: 50%;
   background-color: #3c1f03;
@@ -102,7 +98,6 @@ h1 {
   z-index: 2;
   animation: sunflwr__center 1s 1s forwards;
 }
-
 @keyframes sunflwr__center {
   0% {
     width: 0%;
@@ -113,108 +108,71 @@ h1 {
     height: 25%;
   }
 }
-
-.sunflwr__pedal--1,
-.sunflwr__pedal--2,
-.sunflwr__pedal--3,
-.sunflwr__pedal--4,
-.sunflwr__pedal--5,
-.sunflwr__pedal--6,
-.sunflwr__pedal--7,
-.sunflwr__pedal--8,
-.sunflwr__pedal--9,
-.sunflwr__pedal--10,
-.sunflwr__pedal--11,
-.sunflwr__pedal--12 {
-  background-color: #f4ea0a;
+.sunflwr__pedal--1, .sunflwr__pedal--7, .sunflwr__pedal--12, .sunflwr__pedal--11, .sunflwr__pedal--10, .sunflwr__pedal--9, .sunflwr__pedal--8, .sunflwr__pedal--6, .sunflwr__pedal--5, .sunflwr__pedal--4, .sunflwr__pedal--3, .sunflwr__pedal--2 {
+  border-radius: 50%;
+  background: #f2fe00;
+  transform: translate(-50%, -50%);
   position: absolute;
-  top: 40%;
   left: 50%;
-  z-index: 1;
-  animation: sunflwr__pedal 0.5s 1.5s forwards;
-  transform-origin: bottom;
+  top: 40%;
+  animation: grow-pedal-back 1s 1.5s forwards;
 }
-
-.sunflwr__pedal--1 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(0deg);
-}
-
 .sunflwr__pedal--2 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(30deg);
+  transform: translate(-50%, -50%) rotate(30deg);
 }
-
 .sunflwr__pedal--3 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(60deg);
+  transform: translate(-50%, -50%) rotate(60deg);
 }
-
 .sunflwr__pedal--4 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
-
 .sunflwr__pedal--5 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(120deg);
+  transform: translate(-50%, -50%) rotate(120deg);
 }
-
 .sunflwr__pedal--6 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(150deg);
+  transform: translate(-50%, -50%) rotate(150deg);
 }
-
-.sunflwr__pedal--7 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(180deg);
+@keyframes grow-pedal-back {
+  0% {
+    width: 0%;
+    height: 0%;
+    border: 0px solid black;
+  }
+  100% {
+    width: 15%;
+    height: 45%;
+    border: 2px solid black;
+  }
 }
-
+.sunflwr__pedal--7, .sunflwr__pedal--12, .sunflwr__pedal--11, .sunflwr__pedal--10, .sunflwr__pedal--9, .sunflwr__pedal--8 {
+  border-radius: 20% 50% 20% 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  animation: grow-pedal-front 1s 2s forwards;
+}
 .sunflwr__pedal--8 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(210deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-
 .sunflwr__pedal--9 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(240deg);
+  transform: translate(-50%, -50%) rotate(75deg);
 }
-
 .sunflwr__pedal--10 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(270deg);
+  transform: translate(-50%, -50%) rotate(105deg);
 }
-
 .sunflwr__pedal--11 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(300deg);
+  transform: translate(-50%, -50%) rotate(135deg);
 }
-
 .sunflwr__pedal--12 {
-  border-radius: 50% 50% 50% 0%;
-  width: 15%;
-  height: 35%;
-  transform: translate(0%, -50%) rotate(330deg);
+  transform: translate(-50%, -50%) rotate(165deg);
 }
+@keyframes grow-pedal-front {
+  0% {
+    height: 0%;
+    width: 0%;
+    border: 0px solid black;
+  }
+  100% {
+    height: 35%;
+    width: 10%;
+    border: 2px solid black;
+  }
+}/*# sourceMappingURL=style.css.map */
