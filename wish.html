@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="wishMessage">Happy Anniversary Love!!!!<br><small id="clickForMore">(click for more)</small></h1>
+
+    <div class="sunflwr">
+      <div class="sunflwr__leaf--left"></div>
+      <div class="sunflwr__leaf--right"></div>
+      <div class="sunflwr__stem"></div>
+      <div class="sunflwr__center"></div>
+      <div class="sunflwr__pedal--1"></div>
+      <div class="sunflwr__pedal--2"></div>
+      <div class="sunflwr__pedal--3"></div>
+      <div class="sunflwr__pedal--4"></div>
+      <div class="sunflwr__pedal--5"></div>
+      <div class="sunflwr__pedal--6"></div>
+      <div class="sunflwr__pedal--7"></div>
+      <div class="sunflwr__pedal--8"></div>
+      <div class="sunflwr__pedal--9"></div>
+      <div class="sunflwr__pedal--10"></div>
+      <div class="sunflwr__pedal--11"></div>
+      <div class="sunflwr__pedal--12"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to retrieve and decode the wish message from the URL 
+        function getMessageFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const encodedMessage = params.get('message');
+            if (encodedMessage) {
+                return decodeURIComponent(atob(encodedMessage));
+            }
+            return "Happy Anniversary Love!!!!"; // Fallback message
+        }
+
+        // Update the wish message on page load
+        document.getElementById("wishMessage").innerHTML = getMessageFromUrl() + '<br><small id="clickForMore">(click for more)</small>';
+
+        // Add click event listener to make "(click for more)" disappear //Every day apart is one day closer to being in your arms again, when are you going to say yes to me cutiee!!!❤️❤️❤️❤️❤️❤️
+        document.getElementById("clickForMore").addEventListener("click", function() {
+            this.style.display = "none";
+        });
+    </script>
+</body>
+</html>
+
+
