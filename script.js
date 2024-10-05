@@ -1,4 +1,3 @@
-
 (function() {
     const numOfFlowers = 4;
     const growGarden = () => {
