@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -72,7 +73,6 @@
                 const message = document.getElementById("messageInput").value;
                 if (message.trim() !== "") {
                     const encodedMessage = btoa(encodeURIComponent(message));
-                    // Using window.location.origin to generate absolute URL for hosted environments
                     const link = `${window.location.origin}/wish.html?message=${encodedMessage}`;
                     navigator.clipboard
                         .writeText(link)
