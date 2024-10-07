@@ -6,6 +6,7 @@
         }
 
         let positions = [];
+        console.log("Script is running!");
 
         function getNum() {
             let pos = getRandomArbitrary(0, 100);
