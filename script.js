@@ -71,7 +71,5 @@
     }
     
     // Trigger flower growth on body click
-    document.body.addEventListener('click', () => {
-        growGarden();
-    });
+    growGarden();
 })();
