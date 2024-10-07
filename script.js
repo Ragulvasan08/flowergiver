@@ -11,12 +11,14 @@
             let pos = getRandomArbitrary(0, 100);
             for (let x = 0; x < positions.length; x++) {
                 if (pos > positions[x] - 3 && pos < positions[x] + 3) {
-                    return false;
+                    return false; // Position conflict
                 }
             }
-            positions.push(pos);
+            positions.push(pos); // Add position if valid
+            return true; // Indicate success
         }
 
+        // Generate unique positions for the tulips
         while (positions.length < numOfFlowers) {
             getNum();
         }
@@ -25,9 +27,9 @@
             let flwr = document.createElement('div');
             let dim = getRandomArbitrary(30, 80);  // Random dimension for tulip
             let leftPos = positions[0];
-            positions.shift();
+            positions.shift(); // Remove the used position
 
-            // Add the tulip's structure here (replace the sunflwr class names with tulip class names)
+            // Add the tulip's structure
             flwr.classList.add('tulip');
             flwr.innerHTML = `
                 <div class="stem">
@@ -55,7 +57,7 @@
             flwr.style.left = `${leftPos}vw`;
             flwr.style.height = `${dim}vmin`;
             flwr.style.width = `${dim}vmin`;
-            flwr.style.zIndex = 100 - dim;  // Ensures smaller tulips appear behind
+            flwr.style.zIndex = 100 - dim;  // Ensure smaller tulips appear behind
             flwr.style.filter = `saturate(${getRandomArbitrary(100, 130)}%) brightness(${getRandomArbitrary(90, 110)}%)`;  // Updated filter for better color
            
             // Append the new tulip to the body
