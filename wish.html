@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -68,16 +67,15 @@
                     alert("Please enter a message.");
                 }
             }
-
+            
             function copyLink() {
                 const message = document.getElementById("messageInput").value;
                 if (message.trim() !== "") {
                     const encodedMessage = btoa(encodeURIComponent(message));
-                    const link = `${window.location.origin}/wish.html?message=${encodedMessage}`;
-                    navigator.clipboard
-                        .writeText(link)
+                    const link = `${window.location.origin}/index.html?message=${encodedMessage}`;
+                    navigator.clipboard.writeText(link)
                         .then(() => {
-                            alert("Link copied, share it with people!");
+                            alert("Link copied! Share it with people.");
                         })
                         .catch((err) => {
                             alert("Failed to copy link: " + err);
