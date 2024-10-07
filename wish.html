@@ -62,11 +62,12 @@
                 const message = document.getElementById("messageInput").value;
                 if (message.trim() !== "") {
                     const encodedMessage = btoa(encodeURIComponent(message));
-                    window.location.href = `wish.html?message=${encodedMessage}`;
+                    window.location.href = `index.html?message=${encodedMessage}`;
                 } else {
                     alert("Please enter a message.");
                 }
             }
+
             
             function copyLink() {
                 const message = document.getElementById("messageInput").value;
