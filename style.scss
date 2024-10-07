@@ -1,8 +1,16 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
+$light-green: #25af59;
+$green: #139a3e;
+$light-pink: #f3a69e;
+$pink: #ff8081;
+$yellowish: #eddec1;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  background-color: $yellowish;
+}
+
 .container{
   position: relative;
   width: 200px;
@@ -216,10 +224,4 @@ $hair-size:30px;
 .rightBlush {
   top: 66px;
   left: 123px;
-}
-
-#wishMessage {
-  font-size: 24px;
-  color: #333;
-  margin-top: 20px;
 }
