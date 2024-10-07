@@ -78,15 +78,24 @@
         </div>
       </div>
     </div>
-  <script>
+ <script>
     function getWishFromUrl() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('wish') || localStorage.getItem('wish') || 'No wish yet';
+        const urlParams = new URLSearchParams(window.location.search);
+        const encodedMessage = urlParams.get('message');
+        if (encodedMessage) {
+            try {
+                return decodeURIComponent(atob(encodedMessage)); // Decode message
+            } catch (e) {
+                return 'Invalid wish message'; // Handle errors
+            }
+        }
+        return 'No wish yet';
     }
+
     document.addEventListener('DOMContentLoaded', () => {
-      const wishMessage = getWishFromUrl();
-      document.getElementById('wishMessage').innerText = wishMessage;
+        const wishMessage = getWishFromUrl();
+        document.getElementById('wishMessage').innerText = wishMessage;
     });
-  </script>
+</script>
 </body>
 </html>
